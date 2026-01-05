@@ -4,7 +4,6 @@ nav {
 }
 
 a {
-    font-size: 7cm;
     padding-right: 5cm;
     text-decoration: none;
     color: darkred;
@@ -12,4 +11,8 @@ a {
 
 h1 {
     color: darkred;
+}
+
+body {
+    background-color: rgb(202, 129, 129);
 }

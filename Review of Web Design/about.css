@@ -4,18 +4,23 @@ nav {
 }
 
 a {
-    font-size: 7cm;
     padding-right: 5cm;
     text-decoration: none;
     color: darkred;
 }
 
 table {
-    border: 2cm;
+    align-items: center;
+    border-collapse: 100%;
+    border-radius: 1cm; 
     border-color: black;
 }
 
 tr {
     padding: 2cm 2cm;
     margin: auto;
+}
+
+body {
+    background-color: rgb(202, 129, 129);
 }
