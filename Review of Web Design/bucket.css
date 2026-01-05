@@ -1,0 +1,15 @@
+nav {
+    text-align: center;
+    background-color: rgb(255, 234, 237);
+}
+
+a {
+    font-size: 7cm;
+    padding-right: 5cm;
+    text-decoration: none;
+    color: darkred;
+}
+
+h1 {
+    color: darkred;
+}
