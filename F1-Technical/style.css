@@ -1,0 +1,13 @@
+.sidebar {
+    position: fixed;
+    min-height: 80vh;
+    width: 200px;
+    background-color: rgb(180, 96, 75);
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+}
