@@ -1,0 +1,147 @@
+html {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    text-align: center;
+    padding: 20px;
+    background-image: url('bg3.jpg');
+    background-size: cover;
+    margin: 0%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.786);}
+
+.sidebar {
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 5cm;
+    height: 100vh;
+    background-color: rgba(9, 17, 31, 0.781);
+    padding-top: 1cm;
+}
+
+.sidebar a {
+    display: block;
+    padding: 20px 15px;
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+
+.sidebar a:hover {
+    background-color: rgba(146, 146, 146, 0.2);
+}
+
+.sidebar a:active {
+    background-color: rgba(146, 146, 146, 0.2);
+    font-weight: bold;
+}
+
+/** Home */
+.products {
+    margin-left: 5.5cm;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    background-color: rgba(146, 146, 146, 0.2);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.product img {
+    min-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product h2 {
+    margin-bottom: 0%;
+}
+
+.product p {
+    margin-top: 5px;
+}
+/** Home */
+
+/** About and Contact */
+.content {
+    margin-left: 5.5cm;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: 9cm;
+    max-width: 600px;
+    background-color: rgba(146, 146, 146, 0.2);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    width: 50%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+form button {
+    display: block;
+    font-family: 'Trebuchet MS';
+    font-size: medium;
+    background-color: #ccc;
+    color: rgb(9, 17, 31);
+    padding: 9px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 1cm;
+    cursor: pointer;
+    
+}
+
+/** About and Contact */
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(9, 17, 31, 0.781);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
