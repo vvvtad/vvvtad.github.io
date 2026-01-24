@@ -1,0 +1,122 @@
+:root {
+    --head-color: linear-gradient(black, rgba(0, 0, 0, 0.118));
+    --foot-color: linear-gradient(rgba(0, 0, 0, 0.118), black);
+    --content-color: rgba(35, 47, 92, 0.638);
+    --text-color: rgb(255, 200, 36);
+    --bar-color: rgba(0, 0, 0, 0.118);
+}
+
+html {
+    background-image: url(bg1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "bar title content"
+        "foot foot foot";
+    grid-template-columns: 200px 500px 1fr;
+}
+
+header {
+    grid-area: header;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    text-align: center;
+    padding: 20px;
+    background-image: var(--head-color);
+    margin: 0%;
+}
+
+.sidebar {
+    grid-area: bar;
+    background-color: var(--bar-color);
+    align-items: center;
+    padding: 1cm 10px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 20px 15px;
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+
+.sidebar a:hover {
+    color: var(--text-color);
+}
+
+.title {
+    grid-area: title;
+    padding-top: 2cm;
+    margin-bottom: 0%;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.title h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    color: var(--text-color);
+}
+
+.login, .signup {
+    grid-area: content;
+    text-align: center;
+    padding: 2cm;
+}
+
+form {
+    background-color: var(--content-color);
+    padding: 1cm;
+    border-radius: 30px;
+    position: relative;
+}
+
+form label {
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    font-size: x-large;
+    margin-top: 10cm;
+}
+
+form input {
+    border-radius: 10px;
+    border-color: var(--bar-color);
+    background-color: white;
+    height: 1cm;
+    width: 7cm;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.submitbutton {
+    font-weight: bolder;
+    background-color: var(--text-color);
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    width: 4cm;
+    height: 1cm;
+    transform: translateY(-50%);
+}
+
+form a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+form a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+footer {
+    grid-area: foot;
+    text-align: center;
+    padding: 20px;
+    background-image: var(--foot-color);
+}
