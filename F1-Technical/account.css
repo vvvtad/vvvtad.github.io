@@ -51,6 +51,10 @@ header {
     color: var(--text-color);
 }
 
+.sidebar a:active {
+    font-weight: bolder;
+}
+
 .title {
     grid-area: title;
     padding-top: 2cm;
