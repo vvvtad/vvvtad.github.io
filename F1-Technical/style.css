@@ -1,0 +1,302 @@
+:root {
+    --head-color: linear-gradient(black, rgba(0, 0, 0, 0.118));
+    --foot-color: linear-gradient(rgba(0, 0, 0, 0.118), black);
+    --content-color: rgba(35, 47, 92, 0.638);
+    --text-color: rgb(255, 200, 36);
+    --bar-color: rgba(0, 0, 0, 0.118);
+}
+
+html {
+    background-image: url('bg1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+/* Page Layout */
+.homecontainer {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "bar feature feature"
+        "bar product product"
+        "foot foot foot";
+    grid-template-columns: 200px 2fr;
+    column-gap: 20px;
+    background-color: var(--content-color);
+}
+
+.aboutcontainer {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "bar history arthistory"
+        "bar creator artcreator"
+        "foot foot foot";
+    grid-template-columns: 200px 2fr;
+    column-gap: 20px;
+    background-color: var(--content-color);
+}
+
+.contactcontainer {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "bar content"
+        "foot foot";
+    grid-template-columns: 200px 1fr;
+    column-gap: 20px;
+    background-color: var(--content-color);
+}
+
+.productcontainer {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "bar tele"
+        "bar mount"
+        "bar acc"
+        "foot foot";
+    grid-template-columns: 200px 1fr;
+    column-gap: 20px;
+    background-color: var(--content-color);
+}
+
+
+header {
+    grid-area: header;
+    padding: 20px;
+    background-image: var(--head-color);
+    margin: 0%;
+}
+
+.sidebar {
+    grid-area: bar;
+    background-color: var(--bar-color);
+    align-items: center;
+    padding: 1cm 10px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 20px 15px;
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+
+.sidebar a:hover {
+    color: var(--text-color);
+}
+
+.sidebar a:active {
+    font-weight: bolder;
+}
+
+.dropcontent {
+    font-size: small;
+    text-indent: 30px;
+}
+
+/** Home */
+/* Features */
+.features {
+    grid-area: feature;
+    position: relative;
+    margin: auto;
+}
+
+.features img {
+    box-shadow: 0 0 20px black;
+}
+
+.feattxttop {
+    position: absolute;
+    font-size: x-large;
+    text-shadow: 0 0 20px black;
+    top: 20px;
+    left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.feattxtbot {
+    position: absolute;
+    font-size: x-large;
+    color: var(--text-color);
+    bottom: 70px;
+    left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.feattxtbot button {
+    background-color: var(--text-color);  
+    bottom: 70px;
+    left: 20px;
+    font-size: x-large;
+    font-weight: bolder;
+    color: white;
+
+    border-radius: 10px;
+    border-style: outset;
+    width: 4cm;
+    height: 1cm;
+    transform: translateY(-50%);
+}
+
+/* Featured Products */
+.products {
+    grid-area: product;
+    margin: auto;
+    padding: 50px;
+    color: var(--text-color);
+}
+
+.productgrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    padding: 15px;
+    background-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: var(--text-color);
+    text-align: center;
+    color: black;
+}
+
+.product img {
+    height: 300px;
+    border-radius: 10px;
+}
+
+.product h2 {
+    margin-bottom: 0%;
+}
+/** Home */
+
+/* Products */
+.tele, .mounts, .access {
+    margin: auto;
+    padding: 50px;
+    color: var(--text-color);
+}
+
+.tele {
+ grid-area: tele;
+}
+
+.mounts {
+ grid-area: mount;
+}
+
+.access {
+ grid-area: acc;
+}
+/* Products */
+
+/* About Us */
+.history {
+    grid-area: arthistory;
+    margin-right: 2cm;
+    margin-bottom: 1cm;
+}
+
+.creator {
+    grid-area: artcreator;
+    margin-right: 2cm;
+    margin-bottom: 1cm;
+}
+
+.history p, .creator p {
+    font-size: larger;
+}
+
+.history h1, .history h2, .creator h1 {
+    color: var(--text-color);
+}
+
+.historyimg{
+    grid-area: history;
+}
+
+.creatorimg {
+    grid-area: creator;
+    margin-bottom: 50px;    
+}
+
+.historyimg, .creatorimg {
+    margin-top: 2cm;
+    width: 300px;
+}
+
+/* About Us */
+
+/* Contact Us */
+.content {
+    grid-area: content;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    box-sizing: border-box;
+    background-color: var(--content-color);
+    padding: 1cm;
+    border-radius: 30px;
+    position: relative;
+}
+
+form label {
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    font-size: x-large;
+    margin-top: 10cm;
+}
+
+form input {
+    border-radius: 10px;
+    border-color: var(--bar-color);
+    background-color: white;
+    height: 1cm;
+    width: 9cm;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+form textarea {
+    width: 50%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
+}
+
+form button {
+    position: relative;
+    background-color: var(--text-color);  
+    font-size: x-large;
+    font-weight: bolder;
+    color: white;
+
+    border-radius: 10px;
+    border-style: outset;
+    width: 4cm;
+    height: 1cm;
+    transform: translateY(-50%);
+    
+}
+/* Contact Us */
+
+footer {
+    grid-area: foot;
+    text-align: center;
+    color: var(--text-color);
+    padding: 20px;
+    background-image: var(--foot-color);
+}
