@@ -15,16 +15,25 @@ html {
 }
 
 /* Page Layout */
+.logsigncontainer {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "title content"
+        "foot foot";
+    grid-template-columns: 600px 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
 .homecontainer {
     display: grid;
     grid-template-areas: 
-        "header header header"
-        "bar feature feature"
-        "bar product product"
-        "foot foot foot";
-    grid-template-columns: 200px 2fr;
-    column-gap: 20px;
-    background-color: var(--content-color);
+        "header header"
+        "bar feature"
+        "bar product"
+        "foot foot";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 2fr auto;
 }
 
 .aboutcontainer {
@@ -35,8 +44,7 @@ html {
         "bar creator artcreator"
         "foot foot foot";
     grid-template-columns: 200px 2fr;
-    column-gap: 20px;
-    background-color: var(--content-color);
+    grid-template-rows: auto 2fr auto;
 }
 
 .contactcontainer {
@@ -46,8 +54,7 @@ html {
         "bar content"
         "foot foot";
     grid-template-columns: 200px 1fr;
-    column-gap: 20px;
-    background-color: var(--content-color);
+    grid-template-rows: auto 1fr auto;
 }
 
 .productcontainer {
@@ -59,10 +66,14 @@ html {
         "bar acc"
         "foot foot";
     grid-template-columns: 200px 1fr;
-    column-gap: 20px;
-    background-color: var(--content-color);
+    grid-template-rows: auto 3fr auto;
 }
 
+.logsigncontainer, .homecontainer, .aboutcontainer, .contactcontainer, .productcontainer {
+    column-gap: 20px;
+    min-height: 100vh;
+    background-color: var(--content-color);
+}
 
 header {
     grid-area: header;
@@ -81,23 +92,47 @@ header {
 .sidebar a {
     display: block;
     padding: 20px 15px;
-    text-decoration: none;
-    color: white;
-    font-size: larger;
 }
 
-.sidebar a:hover {
+.sidebar a, .receipt a {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+}
+
+.sidebar a:hover, .receipt a:hover {
     color: var(--text-color);
 }
 
-.sidebar a:active {
+.sidebar a:active, .receipt a:active {
     font-weight: bolder;
 }
 
-.dropcontent {
-    font-size: small;
+.dropcontent a {
+    font-size: large;
     text-indent: 30px;
 }
+
+/* Log In and Sign Up*/
+.login, .signup {
+    grid-area: content;
+    text-align: center;
+    margin: 2vh 4vh;
+}
+
+.title {
+    grid-area: title;
+    padding-top: 2cm;
+    margin-bottom: 0%;
+    margin: 2vh 4vh;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.title h1 {
+    color: var(--text-color);
+}
+/* Log In and Sign Up*/
 
 /** Home */
 /* Features */
@@ -131,24 +166,9 @@ header {
     padding-right: 20px;
 }
 
-.feattxtbot button {
-    background-color: var(--text-color);  
-    bottom: 70px;
-    left: 20px;
-    font-size: x-large;
-    font-weight: bolder;
-    color: white;
-
-    border-radius: 10px;
-    border-style: outset;
-    width: 4cm;
-    height: 1cm;
-    transform: translateY(-50%);
-}
-
 /* Featured Products */
 .products {
-    grid-area: product;
+    grid-area: product feature;
     margin: auto;
     padding: 50px;
     color: var(--text-color);
@@ -252,8 +272,17 @@ form {
     position: relative;
 }
 
+form a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+form a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 form label {
-    font-family:Georgia, 'Times New Roman', Times, serif ;
     font-size: x-large;
     margin-top: 10cm;
 }
@@ -269,7 +298,7 @@ form input {
 }
 
 form textarea {
-    width: 50%;
+    width: 30%;
     height: 150px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -277,21 +306,60 @@ form textarea {
     resize: vertical;
 }
 
-form button {
-    position: relative;
-    background-color: var(--text-color);  
-    font-size: x-large;
+.submitbutton {
+    background-color: var(--text-color);
+    text-align: center;
+    font-size: large;
     font-weight: bolder;
     color: white;
 
     border-radius: 10px;
     border-style: outset;
-    width: 4cm;
+    width: 5cm;
     height: 1cm;
-    transform: translateY(-50%);
-    
+}
+.submitbutton:active {
+    transform: translateY(10%);
 }
 /* Contact Us */
+
+/*Shopping Cart*/
+.carttotal {
+    grid-area: product;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+/*Shopping Cart*/
+
+/* Transaction */
+.receipt {
+    grid-area: content;
+    padding: 20px;
+}
+
+.receipt h1, .receipt p {
+    text-align: center;
+    color: var(--text-color);
+}
+
+table {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+table th {
+    padding: 10px;
+    background-color: var(--content-color);
+}
+
+table td {
+    padding: 10px;
+    background-color: var(--bar-color);
+}
+/* Transaction */
 
 footer {
     grid-area: foot;
