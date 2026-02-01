@@ -6,6 +6,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="contactcontainer">
+        <header>
+            <img src="logo.png">
+        </header>
+
+        <nav class="sidebar">
+            <a href="home.html">Home</a>
+            <a href="product.html">Products</a>
+            <div class="dropcontent">
+                    <a href="product.html#tele">Telescope</a>
+                    <a href="product.html#mounts">Mounts</a>
+                    <a href="product.html#access">Accessories</a>
+                </div>
+            <a href="cart.html">Shopping Cart</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <section class="paymentform">
+            <h2>Payment Information</h2>
+        
+            <form action="transaction.html">
+                <label>Choose a payment method: </label>
+                <select>
+                    <option value="PayPal">PayPal</option>
+                    <option value="Gcash">Gcash</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Mastercard">Mastercard</option>
+                </select><br>
+
+                <label for="cardnumber">Card Number:</label><br>
+                <input type="number" id="cardnumber" name="cardnumber" required><br>
+
+                <label for="expdate">Expiration Date:</label><br>
+                <input type="date" id="expdate" name="expdate" required><br>
+
+                <label for="code">Security Code:</label><br>
+                <input type="number" id="code" name="code" required><br>
+
+                <input type="submit" class="submitbutton" value="Submit Payment">
+            </form>
+    </section>
+
+    <footer>
+            <p>©2026 Stellarium</p>
+            <p>Email: vtt0000@gmail.com || Contact No.: +639XXXXXXX61</p>
+            <p>Follow us for updates!</p>
+        </footer>
+    </div>
 </body>
 </html>

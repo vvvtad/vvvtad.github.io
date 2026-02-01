@@ -144,6 +144,8 @@ header {
 
 .features img {
     box-shadow: 0 0 20px black;
+    width: 100%;
+    height: auto;
 }
 
 .feattxttop {
@@ -267,7 +269,7 @@ header {
 form {
     box-sizing: border-box;
     background-color: var(--content-color);
-    padding: 1cm;
+    padding: 2cm;
     border-radius: 30px;
     position: relative;
 }
@@ -331,6 +333,25 @@ form textarea {
     text-align: center;
 }
 /*Shopping Cart*/
+
+/*Payment*/
+.paymentform {
+    grid-area: content;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+select {
+    border-radius: 10px;
+    border-color: var(--bar-color);
+    background-color: white;
+    height: 1cm;
+    width: 4cm;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+/*Payment*/
 
 /* Transaction */
 .receipt {
